@@ -39,6 +39,7 @@ router.post('/sales', (req, res) => {
         return
     }
 
+    
     let newList = {
         producto,    
         cantidad
@@ -50,6 +51,8 @@ router.post('/sales', (req, res) => {
     const  json_list = JSON.stringify(list)
     fs.writeFileSync('src/list.json', json_list, 'utf-8')
     res.redirect('/sales')
+
+
 })
 
 
@@ -59,6 +62,6 @@ router.post('/sales', (req, res) => {
 
 
 
-  
+
 
 module.exports = router
